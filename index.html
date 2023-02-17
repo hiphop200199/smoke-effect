@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>smoke</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+      #box {
+        background-image: linear-gradient(
+          35deg,
+          rgb(231, 243, 250),
+          rgb(199, 223, 238),
+          rgb(174, 199, 216)
+        );
+      }
+      img {
+        position: relative;
+        animation: move 180s linear infinite alternate;
+        filter: blur(8px) drop-shadow(0 0 5px rgb(45, 63, 143)) saturate(0.7)
+          grayscale(3%);
+      }
+      @keyframes move {
+        from {
+          transform: translateX(-4000px);
+        }
+        to {
+          transform: translateX(0px);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <img src="smoke.svg" alt="" />
+    </div>
+  </body>
+</html>
